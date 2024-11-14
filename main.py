@@ -94,4 +94,4 @@ st.line_chart(df[['Age', 'Ending Savings', 'Expenses']], x="Age", color=["#4dbf9
 
 st.subheader("Details")
 df.set_index("Age", inplace=True)
-st.table(df.style.format(precision=2, thousands=","))
+st.table(df.style.format(precision=0, thousands=","))

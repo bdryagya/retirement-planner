@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+st.set_page_config(page_title="Retirement Planner")
+
 st.subheader("Retirement Planner")
 
 col1, col2, col3 = st.columns(3)
@@ -92,4 +94,4 @@ st.line_chart(df[['Age', 'Ending Savings', 'Expenses']], x="Age", color=["#4dbf9
 
 st.subheader("Details")
 df.set_index("Age", inplace=True)
-st.table(df.style.format(precision=2))
+st.table(df.style.format(precision=2, thousands=","))
